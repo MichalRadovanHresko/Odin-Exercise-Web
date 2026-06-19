@@ -10,62 +10,71 @@
     --hero-header: 48px;
     --hero-secondary: 18px;
     --information-header: 36px;
+    --padding-horizontal: 20%;
+    --border-radius: 5px;
+    --font-weight-bold: 900;
+    --item-size: 200px;
 }
 
 body {
     font-family: "Roboto", sans-serif;
     padding: 0;
     margin: 0;
-    
 }
-.intro {
-    padding: 0 20% 10%;
+
+.intro-section {
+    padding: 0 var(--padding-horizontal) 10%;
     background-color: var(--dark-background-color);
 }
-.header {
+
+.site-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 8%;
 }
-.header p {
+
+.site-header__logo-text {
     color: var(--hero-main-text);
-    font-weight: 900;
+    font-weight: var(--font-weight-bold);
     font-size: var(--hero-text);
 }
-.links a{
+
+.site-nav__link {
     margin-left: 10px;
     color: var(--hero-secondary-text);
     text-decoration: none;
 }
-.hero {
+
+.hero-section {
     display: flex;
     gap: 7%;
     justify-content: space-between;
-    /* flex-wrap: wrap; */
     align-content: center;
-
 }
-.hero h1 { 
+
+.hero-section__title { 
     font-size: var(--hero-header);
     color: var(--hero-main-text); 
-    font-weight: 900;
+    font-weight: var(--font-weight-bold);
     margin: 0;
 }
-.hero p {
+
+.hero-section__description {
     color: var(--hero-secondary-text);
     margin-top: 0;
     font-size: var(--hero-secondary);
-
 }
-.hero button {
+
+.hero-section__cta-button {
     padding: 7px 25px;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     background-color: var(--button);
     color: var(--hero-secondary-text);
     border: none;
 }
-.hero img {
+
+.hero-section__image {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,69 +84,79 @@ body {
     padding: 3%;
 }
 
-
-.information {
-    padding: 2% 20% 4%;
+.features-section {
+    padding: 2% var(--padding-horizontal) 4%;
     text-align: center;
 }
-.information h1 {
+
+.features-section__title {
     font-size: var(--information-header);
     color: var(--information-header);
-    font-weight: 900;
+    font-weight: var(--font-weight-bold);
 }
-.item {
-   width: 200px;
+
+.feature-card {
+   width: var(--item-size);
 }
-.squares {
+
+.features-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 3%;
 }
-.square {
-    width: 200px;
-    height: 200px;
-    border-radius: 5px;
+
+.feature-card__icon {
+    width: var(--item-size);
+    height: var(--item-size);
+    border-radius: var(--border-radius);
     border: solid 4px var(--button);
 }
-.quote {
+
+.testimonial-section {
     padding: 5% 22%;
     background-color: var(--quote-background-color);
     display: flex;
     flex-direction: column;
 }
-.quote p {
+
+.testimonial__text {
     font-size: var(--information-header);
     font-weight: 300;
     color: var(--quote-text);
 }
-.quote #author {
-    font-weight: 900;
-    font-size: 18px;
+
+.testimonial__author {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--hero-secondary);
     align-self: flex-end;
 }
-.call {
-    margin: 5% 20%;
+
+.cta-section {
+    margin: 5% var(--padding-horizontal);
     padding: 2% 7%;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--button);
     color: var(--hero-secondary-text);
 }
-.call h1{
+
+.cta-section__title {
     color: var(--hero-main-text)
 }
-.call button {
+
+.cta-section__button {
     border: solid 2px var(--hero-main-text);
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     background-color: var(--button);
     color: var(--hero-secondary-text);
     padding: 1% 5%;
-    font-weight: 900;
+    font-weight: var(--font-weight-bold);
 }
-.footer {
-    padding: 2% 20%; 
+
+.site-footer {
+    padding: 2% var(--padding-horizontal); 
     background-color: var(--dark-background-color);
     color: var(--hero-secondary-text);
     text-align: center;
